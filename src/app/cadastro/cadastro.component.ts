@@ -32,5 +32,20 @@ export class CadastroComponent {
       }
     );
   }
-}
 
+  consultarCEP() {
+    if (this.imovel.cep.length === 8) { 
+      this.dataService.obterInformacoesCEP(this.imovel.cep).subscribe(
+        (data: any) => {
+          this.imovel.bairro = data.bairro;
+          this.imovel.cidade = data.localidade;
+          this.imovel.estado = data.uf;
+        },
+        (error) => {
+          console.error('Erro ao consultar CEP:', error);
+        }
+      );
+    }
+  }
+
+}

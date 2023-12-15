@@ -30,4 +30,7 @@ export class DataService {
     return this.http.put<Imovel>(`http://localhost:8080/editarImovel?id=${id}`, updatedImovel);
   }
   
+  obterInformacoesCEP(cep: string) {
+    return this.http.get(`http://localhost:8080/consultaCEP/${cep}`);
+  }
 }

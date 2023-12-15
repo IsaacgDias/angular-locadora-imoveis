@@ -14,7 +14,7 @@
     <input type="text" id="cep" name="cep" required [(ngModel)]="imovel.cep"><br><br>
 
     <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro" required [(ngModel)]="imovel.bairro"><br><br>
+    <input type="text" id="bairro" name="bairro" required [(ngModel)]="imovel.bairro" (blur)="consultarCEP()"><br><br>
 
     <label for="cidade">Cidade:</label>
     <input type="text" id="cidade" name="cidade" required [(ngModel)]="imovel.cidade"><br><br>
