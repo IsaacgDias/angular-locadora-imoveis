@@ -8,6 +8,7 @@
         <th>Bairro</th>
         <th>Cidade</th>
         <th>Estado</th>
+        <th>Ação</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,8 @@
         <td>{{ imovel.bairro }}</td>
         <td>{{ imovel.cidade }}</td>
         <td>{{ imovel.estado }}</td>
+        <td><button (click)="deletarImovel(imovel.id)">Deletar</button></td>
+        <td><button (click)="irParaPaginaEditar(imovel.id)">Editar</button></td>
       </tr>
     </tbody>
   </table>

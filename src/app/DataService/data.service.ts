@@ -17,4 +17,17 @@ export class DataService {
   listaImovel(): Observable<Imovel[]> {
     return this.http.get<Imovel[]>('http://localhost:8080/listaImovel');
   }
+
+  deletarImovel(id: number): Observable<any> {
+    return this.http.delete<any>(`http://localhost:8080/deletarImovel?id=${id}`);
+  }
+
+  getImovelById(id: number): Observable<Imovel> {
+    return this.http.get<Imovel>(`http://localhost:8080/getImovelById?id=${id}`);
+  }
+
+  editarImovelById(id: number, updatedImovel: Imovel): Observable<Imovel> {
+    return this.http.put<Imovel>(`http://localhost:8080/editarImovel?id=${id}`, updatedImovel);
+  }
+  
 }

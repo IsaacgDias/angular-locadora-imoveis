@@ -7,14 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ListaComponent } from './lista/lista.component'; 
+import { ListaComponent } from './lista/lista.component';
+import { EditarComponent } from './editar/editar.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CadastroComponent,
-    ListaComponent
+    ListaComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

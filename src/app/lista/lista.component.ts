@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Imovel } from '../model/imovel';
 import { DataService } from '../DataService/data.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-lista',
@@ -10,7 +12,7 @@ import { DataService } from '../DataService/data.service';
 export class ListaComponent implements OnInit {
   imoveis: Imovel[] = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private router:Router) { }
 
   ngOnInit(): void {
     this.carregarImoveis();
@@ -26,5 +28,26 @@ export class ListaComponent implements OnInit {
       }
     );
   }
-}
+
+  deletarImovel(id: number) {
+    this.dataService.deletarImovel(id).subscribe(
+      () => {
+        console.log('Imóvel deletado com sucesso');
+        // Remover o imóvel da lista local
+        this.imoveis = this.imoveis.filter(imovel => imovel.id !== id);
+        this.carregarImoveis();
+      },
+      (error) => {
+        console.log('Erro ao deletar imóvel', error);
+        this.carregarImoveis();
+      }
+    );
+  }
+
+  irParaPaginaEditar(id: number) {
+    this.router.navigate(['/editar', id]);
+  }
+
+}  
+
 
