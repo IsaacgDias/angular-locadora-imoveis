@@ -1,15 +1,28 @@
 <div>
-    <h1>Cadastro</h1>
-    <form>
-      <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo" required><br><br>
-      <label for="descricão">Descrição:</label>
-      <input type="descricao" id="descricao" name="descricao" required><br><br>
-      <label for="valorAluguel">Valor do Aluguel:</label>
-      <input type="valorAluguel" id="valorAluguel" name="valorAluguel" required><br><br>
-      
-            
-      <button type="submit">Cadastrar</button>
-    </form>
-  </div>
-  
+  <h1>Cadastro</h1>
+  <form (ngSubmit)="enviarFormulario()">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo" required [(ngModel)]="imovel.titulo"><br><br>
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" name="descricao" required [(ngModel)]="imovel.descricao"><br><br>
+    
+    <label for="valorAluguel">Valor do Aluguel:</label>
+    <input type="number" id="valorAluguel" name="valorAluguel" required [(ngModel)]="imovel.valorAluguel"><br><br>
+
+    <label for="cep">Cep:</label>
+    <input type="text" id="cep" name="cep" required [(ngModel)]="imovel.cep"><br><br>
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" name="bairro" required [(ngModel)]="imovel.bairro"><br><br>
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" name="cidade" required [(ngModel)]="imovel.cidade"><br><br>
+
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" name="estado" required [(ngModel)]="imovel.estado"><br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+</div>
+

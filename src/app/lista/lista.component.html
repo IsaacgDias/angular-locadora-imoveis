@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Cep</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let imovel of imoveis">
+        <td>{{ imovel.titulo }}</td>
+        <td>{{ imovel.descricao }}</td>
+        <td>{{ imovel.valorAluguel }}</td>
+        <td>{{ imovel.cep }}</td>
+        <td>{{ imovel.bairro }}</td>
+        <td>{{ imovel.cidade }}</td>
+        <td>{{ imovel.estado }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  

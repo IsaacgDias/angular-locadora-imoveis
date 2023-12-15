@@ -15,5 +15,10 @@ export class HomeComponent implements OnInit {
 
   redirectToCadastro(): void {
     this.router.navigate(['/cadastro']);
+    
+  }
+
+  redirectToLista(): void {
+    this.router.navigate(['/lista']);
   }
 }
