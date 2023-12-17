@@ -1,0 +1,60 @@
+.container {
+    position: relative;
+}
+
+.tabelaImovel {
+    width: 100%; /* Definir a largura da tabela como 100% para ocupar todo o espaço disponível */
+    margin: auto;
+    border-collapse: collapse;
+    overflow-x: auto; /* Adicionar rolagem horizontal caso a tabela seja muito larga para o dispositivo */
+}
+
+.tabelaImovel th,
+.tabelaImovel td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabelaImovel th {
+    background-color: #f2f2f2;
+}
+
+.tabelaImovel tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabelaImovel tr:hover {
+    background-color: #ddd;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 20px; /* Reduzir a margem superior para dispositivos menores */
+}
+
+button {
+    width: 100%;
+}
+
+/* Celulares */
+@media only screen and (max-width: 767px) {
+    .tabelaImovel {
+        font-size: 12px; /* Reduzir o tamanho da fonte para dispositivos menores */
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .tabelaImovel {
+        font-size: 14px; /* Ajustar o tamanho da fonte para tablets */
+    }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1024px) {
+    .tabelaImovel {
+        font-size: 16px; /* Ajustar o tamanho da fonte para desktops */
+    }
+}

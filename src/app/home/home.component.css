@@ -1,0 +1,78 @@
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+} 
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header button {
+    padding: 10px 80px;
+    background-color: #c4123f;
+    height: 80px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #a53a43;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50vh;
+    font-size: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Celulares */
+@media only screen and (max-width: 767px) {
+   header {
+    height: 250px;
+   }
+
+    ul > li > button {
+        margin-top: 20px;
+    }
+
+    
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        height: 180px;
+    }
+    
+    button {
+        margin-top: 20px;
+        width: 300px;
+    }
+
+    header > ul > li > button {
+        font-size: 25px;
+    }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1024px) {
+  
+}

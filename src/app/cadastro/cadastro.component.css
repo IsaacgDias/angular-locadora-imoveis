@@ -1,0 +1,85 @@
+*{
+    color: #fff;
+}
+.formulario {
+    background-color: rgba(218, 9, 9, 0.774);
+    margin: auto;
+    margin-top: 12vw;
+    border: 0px solid #000;
+    border-radius: 30px;
+    width: 500px;
+    height: 570px;
+    box-shadow: 0 0 20px 0 darkgray;
+
+}
+form {
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+input{
+    margin-top: 10px;
+    font-size: 19px;
+    width: 250px;
+    height: 29px;
+    padding-left: 15px;
+    background-color: #9b9797;
+    color: #fff7f7;
+    border: 2px solid #0e0e0e;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    margin-top: 5px;
+    width: 150px;
+    height: 50px;
+    background-color:rgba(92, 94, 93);
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0px solid #0e0e0e;
+    color: #fff;
+}
+
+
+button:hover {
+    background-color:rgba(112, 115, 114);
+}
+
+label {
+    font-size: 20px;
+}
+
+/* Celulares */
+@media only screen and (max-width: 767px) {
+    .formulario {
+        margin-top: 0px;
+        width: 300px;
+        height: auto;
+    }
+    
+     
+}
+ 
+ /* Tablets */
+ @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 50px;
+    } 
+    .formulario {
+        width: 700px;
+        height: auto;
+     }
+     label {
+        font-size: 28px;
+     }
+ }
+ 
+ /* Desktops */
+ @media only screen and (min-width: 1024px) {
+   
+ }
